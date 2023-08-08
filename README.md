@@ -24,6 +24,7 @@ gelen_veri_JSON = gelen_veri.json()
 ```
 5. yon_donus adlı bir fonksiyon tanımlıyoruz, bu fonksiyon verilen rüzgar yönünü derece cinsinden alır ve daha anlaşılır bir yön adı ile döner.
 
+
 6. API yanıtında 'cod' anahtarının 404 olmadığını kontrol ederek veri alımını doğruluyoruz:
 ```
 if gelen_veri_JSON['cod'] != "404":
