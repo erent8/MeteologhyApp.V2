@@ -102,7 +102,9 @@ else:
 
 
 #### Aldığımız çıktılar...
-5 gün içerisinde 3 saatlik tahminler sunmaktadır.
+5 günlük ve 3 saat aralıklarla tahmin sunmaktadır.
+------------------------------------------------
+
 ![Ekran görüntüsü 2023-08-08 164411](https://github.com/erent8/MeteologhyApp.V2/assets/86615310/6b090f7a-5a24-449c-a5b0-a5631a70e5a0)
 ------------------------------------------------
 ![day1](https://github.com/erent8/MeteologhyApp.V2/assets/86615310/b65048e0-6b38-4c2c-be56-8176148f135a)
