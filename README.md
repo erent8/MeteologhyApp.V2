@@ -9,7 +9,7 @@ import datetime
 ```
 2. OpenWeatherMap API anahtarını ve temel URL'sini tanımlıyoruz(Site üzerinden API anahtarı almanız gerekmektedir...)
 ```
-API_KEY = "823bcb1f8964ccdb90c1fe8103fb981b"
+API_KEY = "YOUR_API_KEY"
 BASE_URL = "http://api.openweathermap.org/data/2.5/forecast?"
 ```
 3. Kullanıcıdan şehir ismi alarak API isteği için tam URL'yi oluşturuyoruz:
