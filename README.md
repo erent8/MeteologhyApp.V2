@@ -103,6 +103,11 @@ else:
 
 
 #### Aldığımız çıktılar...
+
+![Figure_1](https://github.com/erent8/MeteorolojiAppV2/assets/86615310/79905002-07ed-4879-b840-37531bae7110)
+
+
+
 5 günlük ve 3 saat aralıklarla tahmin sunmaktadır.
 ------------------------------------------------
 
