@@ -1,7 +1,7 @@
 import requests
 import datetime
 
-API_KEY = "823bcb1f8964ccdb90c1fe8103fb981b"
+API_KEY = "YOUR_API_KEY"
 BASE_URL = "http://api.openweathermap.org/data/2.5/forecast?"
 
 SEHIR_ISMI = input("Şehir ismi giriniz...")
