@@ -10,7 +10,7 @@ URL = BASE_URL + "appid=" + API_KEY + "&q=" + SEHIR_ISMI
 
 gelen_veri = requests.get(URL)
 gelen_veri_JSON = gelen_veri.json()
-
+ # kordinatları anlaşılır hale getiriyoruz.
 def yon_donus(yon):
     if 337.5 <= yon < 22.5:
         return "Kuzey"
