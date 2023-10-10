@@ -1,4 +1,4 @@
-# MeteorolojiAppV2
+# MeteorolojiAppV2 
 
 ###### API almak için https://openweathermap.org/api sitesine girerek kayıt oluyoruz. ardından almak istediğimiz veriye göre API seçiyoruz ve projemize entegre ediyoruz...
 
