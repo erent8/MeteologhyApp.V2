@@ -6,22 +6,22 @@
 
 
 1. İlk olarak, gerekli kütüphaneleri içe aktarıyoruz: requests ile HTTP istekleri yapmak ve datetime ile zaman işlemleri yapmak için kuruyoruz...
-```
+```python
 import requests
 import datetime
 ```
 2. OpenWeatherMap API anahtarını ve temel URL'sini tanımlıyoruz(Site üzerinden API anahtarı almanız gerekmektedir...)
-```
+```python
 API_KEY = "YOUR_API_KEY"
 BASE_URL = "http://api.openweathermap.org/data/2.5/forecast?"
 ```
 3. Kullanıcıdan şehir ismi alarak API isteği için tam URL'yi oluşturuyoruz:
-```
+```python
 SEHIR_ISMI = input("Şehir ismi giriniz...")
 URL = BASE_URL + "appid=" + API_KEY + "&q=" + SEHIR_ISMI
 ```
 4. API'ye istek atarak hava durumu verilerini alıyoruz ve JSON formatına çeviriyoruz:
-```
+```python
 gelen_veri = requests.get(URL) 
 gelen_veri_JSON = gelen_veri.json()
 ```
@@ -29,29 +29,29 @@ gelen_veri_JSON = gelen_veri.json()
 
 
 6. API yanıtında 'cod' anahtarının 404 olmadığını kontrol ederek veri alımını doğruluyoruz:
-```
+```python
 if gelen_veri_JSON['cod'] != "404":
 ```
 7. Hava durumu tahminlerini içeren forecasts listesini alıyoruz:
-```
+```python
 forecasts = gelen_veri_JSON["list"]
 ```
 Her bir tahmin verisi için aşağıdaki adımları gerçekleştiriyoruz:
 
 
 8. Unix zaman damgasını alıyoruz:
-```
+```python
 timestamp = forecast["dt"]
 ```
 
 9. Sıcaklık değerlerini alıyoruz:
-```
+```python
 temp_kelvin = forecast["main"]["temp"]
 temp_min = forecast["main"]["temp_min"]
 temp_max = forecast["main"]["temp_max"]
 ```
 10. Diğer hava durumu verilerini alıyoruz:
-```
+```python
 humidity = forecast["main"]["humidity"]
 wind_speed = forecast["wind"]["speed"]
 wind_direction = forecast["wind"]["deg"]
@@ -65,21 +65,21 @@ pressure = forecast["main"]["pressure"]
 country = gelen_veri_JSON["city"]["country"]
 ```
 11. Unix zaman damgasını datetime nesnesine çeviriyoruz:
-```
+```python
 tarih = datetime.datetime.fromtimestamp(timestamp)
 ```
 12. Sıcaklık değerlerini Kelvin'den Celsius'a dönüştürüyoruz:
-```
+```python
 temp_celsius = temp_kelvin - 273.15
 temp_celsius_min = temp_min - 273.15
 temp_celsius_max = temp_max - 273.15
 ```
 13. Rüzgar yönünü daha anlaşılır bir biçimde ifade etmek için yon_donus fonksiyonunu kullanıyoruz:
- ```
+ ```python
 ruzgar_yonu = yon_donus(wind_direction)
 ```
 14. Aldıgımız verileri ekrana yazdırıyoruz:
- ```
+ ```python
 print("Tarih ve Saat:", tarih_str)
 print("Gün:", gun)
 print("Sıcaklık: {:.2f} °C".format(temp_celsius))
@@ -99,7 +99,7 @@ print("Ülke:", country)
 print("------------------------")
 ```
 15. Eğer şehir adı geçerli değilse (404 hatası alınırsa) kullanıcıya bir hata mesajı gösteriyoruz:
- ```
+ ```python
 else:
     print("Geçersiz şehir adı...")
 ```
